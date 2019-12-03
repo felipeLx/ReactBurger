@@ -1,9 +1,10 @@
 import React from 'react';
 
-import classes from ',/Input.module.css';
+import classes from './Input.module.css';
 
 const input = (props) => {
     let inputElement = null;
+    
     switch(props.elementType) {
         case ('input'):
             inputElement = <input 
@@ -20,7 +21,7 @@ const input = (props) => {
                 onChange={props.change} />;
             break;
         case('select'):
-            inputElement = <select 
+            inputElement = (<select 
                 className={classes.InputElement}  
                 value={props.value}
                 onChange={props.change} >
@@ -29,7 +30,8 @@ const input = (props) => {
                             {option.displayValue}
                         </option>
                     ))}
-                </select>;
+                </select>
+            );
             break;
         default:
             inputElement = <input 

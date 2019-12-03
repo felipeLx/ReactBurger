@@ -110,7 +110,6 @@ class ContactData extends Component {
 
         let form = (
             <form onSubmit={this.orderHandler}>
-                <Input elementType="..." elementConfig="..." value="..." />
                 {formElementsArray.map(formElement => (
                     <Input 
                         key={formElement.id}
