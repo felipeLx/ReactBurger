@@ -18,12 +18,12 @@ const rootReducer = combineReducers({
     order: orderReducer
 });
 
-const myStore = createStore(rootReducer,  composeEnhancers(
+const store = createStore(rootReducer, composeEnhancers(
     applyMiddleware(thunk)
-  ));
+));
 
 const app = (
-    <Provider store={myStore}>
+    <Provider store={store}>
         <BrowserRouter>
             <App />
         </BrowserRouter>
