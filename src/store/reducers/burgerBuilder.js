@@ -1,4 +1,4 @@
-import * as actionType from '../actions/burgerBuilder';
+import * as actionType from '../actions/actionTypes';
 
 const initialState = {
     ingredients: null,
