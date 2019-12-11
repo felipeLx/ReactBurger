@@ -165,14 +165,14 @@ const mapStateToProps = state => {
          error: state.auth.error,
          isAuthenticated: state.auth.token !== null,
          buildingBurger: state.burgerBuilder.building,
-         authRedirectPath: state.auth.authRedirectPath 
+         authRedirectPath: state.auth.setAuthRedirectPath 
      }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         onAuth: (email, password, isSignup) => dispatch(actions.auth(email, password, isSignup)),
-        onSetAuthRedirectPath: () => dispatch(actions.authRedirectPath('/'))
+        onSetAuthRedirectPath: () => dispatch(actions.setAuthRedirectPath('/'))
     }
 };
 
